@@ -1,0 +1,41 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    background-color: #242424;
+}
+.container{
+    padding: 30px ;
+}
+
+
+
+/* NAVIGATION */
+ul{
+    list-style-type: none;
+    display: flex;
+}
+li{
+    padding-left: 20px;
+}
+.logo__sizing{
+    width: 100%;
+    max-width: 100px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__bar{
+    display: flex;
+    align-items: center;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
