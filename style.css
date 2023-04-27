@@ -4,10 +4,25 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    background-color: #242424;
+    background-color: #141414;
 }
 .container{
-    padding: 30px ;
+padding: 30px;
+}
+
+/* SEARCH BAR */
+.search__bar input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 25px;
+    outline: none;
+    font-size: 1.1em;
+    color: #141414;
+    background:linear-gradient();
+    box-shadow: 5px 5px 5px;
+
 }
 
 
@@ -18,11 +33,15 @@ ul{
     display: flex;
 }
 li{
-    padding-left: 20px;
+    padding-left: 30px;
+}
+
+.logo{
+    display: flex;
 }
 .logo__sizing{
-    width: 100%;
-    max-width: 100px;
+    width: 100%; 
+    max-width: 120px;
 }
 .nav{
     display: flex;
@@ -38,4 +57,14 @@ li{
     color: white;
     display: flex;
     flex-direction: column;
+}
+/* BANNER */
+.banner__content{
+    color: white;
+    position: absolute;
+    top: 50%;
+}
+.stranger{
+    width: 100%;
+    height: 800px;
 }
