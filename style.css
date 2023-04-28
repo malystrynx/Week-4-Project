@@ -20,18 +20,40 @@ padding-right:30px;
 }
 
 /* SEARCH BAR */
+
+.search__bar:hover input{
+    width: 320px;
+}
+
+.profile{
+    display: flex;
+}
 .search__bar input{
-    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: rgba(27, 22, 22, 0.719);
+    color: white;
     width: 100%;
     height: 100%;
     border: 0.5px solid white;
-    padding: 10px 25px;
-    outline: none;
-    font-size: 1.1em;
-    color: white;
-background-color: rgba(27, 22, 22, 0.719);
-
+    padding:10px;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s;
+    opacity: 0;
 }
+
+.search__bar input:hover{
+        opacity:1;
+    transition:0.8s ease;
+}
+
+
+
+/* MOVIE LIST */
+
 
 
 
@@ -162,6 +184,11 @@ ul{
     width: 100%;
     border-radius: 3%;
     cursor: pointer;
+    transition: 650ms ;
+}
+.movie__img:hover{
+    transform: scale(1.3);
+    z-index: 2;
 }
 .movies{
     padding-bottom: 20px;
