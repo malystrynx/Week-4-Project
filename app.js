@@ -1,6 +1,6 @@
 // FAKE API
-https://www.omdbapi.com/?i=tt3896198&apikey=6d5a5da9
-https://www.omdbapi.com/?i=tt3896198&apikey=6d5a5da9&s=fast
+
+// https://www.omdbapi.com/?i=tt3896198&apikey=6d5a5da9&s=fast
 
 
 // NAVIGATION BAR SCROLL
@@ -28,3 +28,62 @@ async function main(){
 
 main()
 
+
+const keywords = ['action','thriller', 'comedy', 'drama','sci-fi','anime','cartoon'];
+
+
+const keyword = keywords[Math.floor(Math.random() * keywords.length)];
+
+// API URL with search query and API key
+const apiUrl = `https://www.omdbapi.com/?s=${keyword}&apikey=6d5a5da9`;
+
+
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    
+    const posters = data.Search.map(movie => movie.Poster).slice(0, 8);
+
+
+    const posterGrid = document.getElementById('poster-grid');
+    posters.forEach(poster => {
+      const posterElement = document.createElement('div');
+      posterElement.className = 'poster';
+      posterElement.innerHTML = `<img src="${poster}">`;
+      posterGrid.appendChild(posterElement);
+    });
+  });
+
+
+  const apiKey = '6d5a5da9';
+      const posterGrid = document.getElementById('poster-grid');
+      const searchForm = document.getElementById('search-form');
+      
+      const loadPosters = async (url) => {
+        posterGrid.innerHTML = '';
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.Response === 'True') {
+          const posters = data.Search.map(movie => movie.Poster);
+          posters.forEach(poster => {
+            const posterElement = document.createElement('div');
+            posterElement.className = 'poster';
+            const posterImage = document.createElement('img');
+            posterImage.src = poster;
+            posterElement.appendChild(posterImage);
+            posterGrid.appendChild(posterElement);
+          });
+        } else {
+          const errorElement = document.createElement('p');
+          errorElement.textContent = data.Error;
+          posterGrid.appendChild(errorElement);
+        }
+      };
+      
+      searchForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const searchInput = document.getElementById('search-input');
+        const searchTerm = searchInput.value;
+        const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`;
+        loadPosters(apiUrl);
+      });
