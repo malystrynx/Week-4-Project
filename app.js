@@ -42,7 +42,7 @@ fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
     
-    const posters = data.Search.map(movie => movie.Poster).slice(0, 8);
+    const posters = data.Search.map(movie => movie.Poster).slice(0, 6);
 
 
     const posterGrid = document.getElementById('poster-grid');
@@ -87,3 +87,6 @@ fetch(apiUrl)
         const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`;
         loadPosters(apiUrl);
       });
+
+// WHEN YOU SEARCH FOR MOVIES 
+      // searchJS

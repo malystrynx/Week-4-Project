@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
+    outline: red dashed 1px;
 }
 
 body{
@@ -131,7 +132,7 @@ ul{
 }
 .stranger{
     width: 100%;
-    height: 850px;
+    height: 800px;
 }
 
 .banner__title{
@@ -247,3 +248,4 @@ justify-content: center;
     height: 25px;
     padding-right: 50px;
 }
+
