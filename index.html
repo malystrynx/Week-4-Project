@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popcorn</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap');
@@ -35,8 +35,8 @@
                 <div class="profile">
                     <ul>
                         <li class="nav__logo search__bar">
-                            <input id="searchJS" placeholder="Search for movies..." >
-                        <a class="glass" href="#"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i></a>
+                            <input onchange="searchMovies()" class="search-bar" placeholder="Search for movies..." type="text" >
+                            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
                     </li>
                         <li class="nav__logo"><a href="#"><i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i></a></li>
                         <li class="nav__logo"><a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a></li>
@@ -97,19 +97,16 @@
     <div class="content"></div>
 </section>
 <section class="search__section">
+    <h1 class="feature__title">You searched for...</h1>
     <div class="search">
-        <h1 class="feature__title">You searched for...</h1>
-        <!-- SEARCH RESULT -->
-        <ul class="movie__results">
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-            <li class="movie__search"><img src="./pictures/JS pics/avatar.jpg" alt="">MOVIE NAME</li>
-        </ul>
+        <div class="card">
+            <div class="header data-header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
+            <div class="body data-body"><h1>movie title</h1></div>
+        </div>
     </div>
 </section>
+
+
 
 
 
