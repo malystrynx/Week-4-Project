@@ -35,9 +35,13 @@
                 <div class="profile">
                     <ul>
                         <li class="nav__logo search__bar">
-                            <input onchange="searchMovies()" class="search-bar" placeholder="Search for movies..." type="text" >
-                            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
-                    </li>
+                            <form id="search">
+                                <input  class="search-bar" onchange="onSearchChange(event)" placeholder="Search for movies..." type="text" >
+                                <i id="glass" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+                            </form>
+                            
+                            
+                        </li>
                         <li class="nav__logo"><a href="#"><i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i></a></li>
                         <li class="nav__logo"><a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a></li>
                     </ul>
@@ -65,10 +69,19 @@
             </div>
         </div>
     </section>
+    <!-- Trending -->
     <section class="movies">
         <div class="container">
         <div class="featured">
             <h1 class="feature__title">Trending Now</h1>
+            <ul class="movie__list">
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/1.JPG" alt=""></li>
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/guardian.jpg" alt=""></li>
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/3.JPG" alt=""></li>
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/4.JPG" alt=""></li>
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/5.JPG" alt=""></li>
+                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/6.JPG" alt=""></li>
+            </ul>
         </div>
         <style>
 
@@ -97,13 +110,21 @@
     <div class="content"></div>
 </section>
 <section class="search__section">
-    <h1 class="feature__title">You searched for...</h1>
-    <div class="search">
-        <div class="card">
-            <div class="header data-header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
-            <div class="body data-body"><h1>movie title</h1></div>
+    <h1 class="feature__title result">You searched for...</h1>
+    <div class="movie-section">
+        <div class="movie-list">
+            <div class="search">
+                <div class="cards">
+                    <div class="card">
+                        <div class="header data-header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
+                        <div class="body data-body"><h1>movie title</h1></div>
+                        <div class="body data-body"><h1>Movie Year</h1></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+        
 </section>
 
 
