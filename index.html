@@ -22,13 +22,13 @@
             <div class="scrolling">
             <div class="nav" id="nav">
                 <div class="logo">
-                    <img href="movie.html" class="logo__sizing" src="./pictures/Logo (3).png" alt="">
+                    <a class="nav__link" href="#"><img href="movie.html" class="logo__sizing" src="./pictures/Logo (3).png" alt=""></a>
                     <div class="nav__bar">
                         <ul>
                             <li><a class="nav__link" href="#">Home</a></li>
                             <li><a class="nav__link" href="#">Movies</a></li>
-                            <li><a class="nav__link" href="#">New</a></li>
-                            <li><a class="nav__link" href="#">Popular</a></li>
+                            <li><a class="nav__link" href="#new">New</a></li>
+                            <li><a class="nav__link" href="#popular">Popular</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
         </div>
     </section>
     <!-- Trending -->
-    <section class="movies">
+    <section id="new" class="movies">
         <div class="container">
         <div class="featured">
             <h1 class="feature__title">Trending Now</h1>
@@ -89,7 +89,7 @@
         </head>
         <body>
           <div id="poster-grid"></div>
-        <div class="featured">
+        <div id="popular" class="featured">
             <h1 class="feature__title">Continue Watching</h1>
         </div>
         <div class="movies">
@@ -110,13 +110,13 @@
     <div class="content"></div>
 </section>
 <section class="search__section">
-    <h1 class="feature__title result">You searched for...</h1>
+    <h1 class="feature__title result">You searched for ...</h1>
     <div class="movie-section">
         <div class="movie-list">
             <div class="search">
                 <div class="cards">
                     <div class="card">
-                        <div class="header data-header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
+                        <div class="header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
                         <div class="body data-body"><h1>movie title</h1></div>
                         <div class="body data-body"><h1>Movie Year</h1></div>
                     </div>

@@ -24,14 +24,21 @@ async function onSearchChange(event) {
   );
   const cardEl = document.querySelector(".cards");
   const moviesData = await movies.json();
-  cardEl.innerHTML = moviesData.Search.map(
-    (movie) => `
-    <div class="card">
-        <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
-    </div>
-`
-  ).join("")
-  
+
+  const searchResults = moviesData.Search || [];
+
+  cardEl.innerHTML = searchResults
+    .slice(0, 6) // Take the first 6 movies
+    .map(
+      (movie) => `
+        <div class="card">
+            <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
+        </div>
+    `
+    )
+    .join(""); 
+    const cardsContainer = document.querySelector(".cards");
+  cardsContainer.scrollIntoView({ behavior: "smooth" });
 }
 
 async function main() {
@@ -40,15 +47,20 @@ async function main() {
   );
   const moviesData = await movies.json();
   const cardEl = document.querySelector(".cards");
-  cardEl.innerHTML = moviesData.Search.map(
-    (movie) => `
-    <div class="card">
-        <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
-    </div>
-`
-  ).join("");
+  
+  cardEl.innerHTML = moviesData.Search
+    .slice(0, 6) // Take the first 6 movies
+    .map(
+      (movie) => `
+        <div class="card">
+            <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
+        </div>
+    `
+    )
+    .join("");
 }
 
 main();
 {/* <div class="body data-body"><h1>${movie.Title}</h1></div>
 <div class="body data-body"><h1>${movie.Year}</h1></div> */}
+
