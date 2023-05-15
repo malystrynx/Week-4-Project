@@ -300,7 +300,10 @@ transition: 650ms ;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
+    font-size: 10px;
 }
+
 
 /* RESPONSIVENESS */
 

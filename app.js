@@ -33,11 +33,10 @@ async function onSearchChange(event) {
       (movie) => `
         <div class="card">
             <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
+            <div class="body data-body"><h1>${movie.Title}</h1></div>
+            <div class="body data-body"><h1>${movie.Year}</h1></div>
         </div>
-        <div class="info">
-                            <div class="body data-body"><h1>${movie.Title}</h1></div>
-                        <div class="body data-body"><h1>${movie.Year}</h1></div>
-                    </div>
+
     `
     )
     .join(""); 
@@ -56,13 +55,11 @@ async function main() {
     .slice(0, 6) 
     .map(
       (movie) => `
-        <div class="card">
-            <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
-        </div>
-        <div class="info">
-                            <div class="body data-body"><h1>${movie.Title}</h1></div>
-                        <div class="body data-body"><h1>${movie.Year}</h1></div>
-                    </div>
+      <div class="card">
+      <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
+      <div class="body data-body"><h1>${movie.Title}</h1></div>
+      <div class="body data-body"><h1>${movie.Year}</h1></div>
+  </div>
     `
     )
     .join("");
