@@ -28,12 +28,16 @@ async function onSearchChange(event) {
   const searchResults = moviesData.Search || [];
 
   cardEl.innerHTML = searchResults
-    .slice(0, 6) // Take the first 6 movies
+    .slice(0, 6) 
     .map(
       (movie) => `
         <div class="card">
             <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
         </div>
+        <div class="info">
+                            <div class="body data-body"><h1>${movie.Title}</h1></div>
+                        <div class="body data-body"><h1>${movie.Year}</h1></div>
+                    </div>
     `
     )
     .join(""); 
@@ -49,18 +53,21 @@ async function main() {
   const cardEl = document.querySelector(".cards");
   
   cardEl.innerHTML = moviesData.Search
-    .slice(0, 6) // Take the first 6 movies
+    .slice(0, 6) 
     .map(
       (movie) => `
         <div class="card">
             <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
         </div>
+        <div class="info">
+                            <div class="body data-body"><h1>${movie.Title}</h1></div>
+                        <div class="body data-body"><h1>${movie.Year}</h1></div>
+                    </div>
     `
     )
     .join("");
 }
 
 main();
-{/* <div class="body data-body"><h1>${movie.Title}</h1></div>
-<div class="body data-body"><h1>${movie.Year}</h1></div> */}
+
 
