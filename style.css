@@ -303,7 +303,41 @@ transition: 650ms ;
     align-items: center;
     font-size: 10px;
 }
+.data-body{
+    padding-bottom: 5px;
+}
+.movieTitle{
+    white-space: nowrap; 
+    width: 225px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+/* Spinner */
+.fa-spinner{
+    animation: rotate 600ms infinite linear;
+}
+.movie__loading--spinner{
+    display: none !important;
+}
+.movie__loading .movie__loading--spinner{
+    display: block !important;
+}
+.movie__loading{
+    position:sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+@keyframes rotate{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 /* RESPONSIVENESS */
 

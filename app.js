@@ -17,14 +17,21 @@ window.addEventListener("scroll", changeScrolling);
 
 // MOVIE SEARCH
 
+
+
+
 async function onSearchChange(event) {
   const search = event.target.value;
   const movies = await fetch(
     `https://www.omdbapi.com/?i=tt3896198&apikey=6d5a5da9&s=${search}`
   );
+
+// document.body.classList += ' movies__loading'
+
   const cardEl = document.querySelector(".cards");
   const moviesData = await movies.json();
 
+  // document.body.classList.remove(' movies__loading')
   const searchResults = moviesData.Search || [];
 
   cardEl.innerHTML = searchResults
@@ -33,7 +40,7 @@ async function onSearchChange(event) {
       (movie) => `
         <div class="card">
             <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
-            <div class="body data-body"><h1>${movie.Title}</h1></div>
+            <div class="body data-body movieTitle"><h1>${movie.Title}</h1></div>
             <div class="body data-body"><h1>${movie.Year}</h1></div>
         </div>
 
@@ -42,6 +49,9 @@ async function onSearchChange(event) {
     .join(""); 
     const cardsContainer = document.querySelector(".cards");
   cardsContainer.scrollIntoView({ behavior: "smooth" });
+}
+function searchMovies(event){
+  event.preventDefault();
 }
 
 async function main() {
@@ -57,7 +67,7 @@ async function main() {
       (movie) => `
       <div class="card">
       <div class="header data-header"><img class="movie__search" src="${movie.Poster}" alt="This image is unavailable"></div>
-      <div class="body data-body"><h1>${movie.Title}</h1></div>
+      <div class="body data-body movieTitle"><h1>${movie.Title}</h1></div>
       <div class="body data-body"><h1>${movie.Year}</h1></div>
   </div>
     `
@@ -68,3 +78,4 @@ async function main() {
 main();
 
 
+// MAKE A SKELETON LOADING STAGE 
