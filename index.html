@@ -34,11 +34,12 @@
                 </div>
                 <div class="profile">
                     <ul>
-                        <li class="nav__logo search__bar">
+                        <li class="search__bar">
                             <form id="search" onsubmit="searchMovies(event)">
                                 <input  class="search-bar" onchange="onSearchChange(event)" placeholder="Search for movies..." type="text" >
-                                <i id="glass" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+                                <!-- <i id="glass" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i> -->
                             </form>
+
                             
                             
                         </li>
@@ -104,19 +105,13 @@
 
 
     </div>
-    </section>
-</body>
-<section class="test">
-    <div class="content"></div>
-</section>
-<section class="search__section">
     <h1 class="feature__title result">You searched for ...</h1>
     <div class="movie-section">
         <div class="movie-list">
             <!-- <div class="movie__loading">
                 <i class="fa-solid fa-spinner fa-2xl movie__loading--spinner" style="color: #ffffff;"></i>
             </div> -->
-            <div class="search">
+            <div class="movies">
                 <div class="cards">
                     <div class="card">
                         <div class="header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
@@ -131,8 +126,13 @@
             </div>
         </div>
     </div>
+    </section>
+</body>
+
+
     
-</section>
+    
+
 
 
 
