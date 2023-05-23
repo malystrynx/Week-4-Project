@@ -1,158 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popcorn</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap');
-    </style>
-    <script src="https://kit.fontawesome.com/1256adce66.js" crossorigin="anonymous"></script>
-</head>
 
-<body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/1256adce66.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
     <!-- NAVIGATION BAR -->
     <section class="navigation">
-        <div class="container__nav>
-            <div class="scrolling">
-            <div class="nav" id="nav">
-                <div class="logo">
-                    <a class="nav__link" href="#"><img href="movie.html" class="logo__sizing" src="./pictures/Logo (3).png" alt=""></a>
-                    <div class="nav__bar">
-                        <ul>
-                            <li><a class="nav__link" href="#">Home</a></li>
-                            <li><a class="nav__link" href="#">Movies</a></li>
-                            <li><a class="nav__link" href="#new">New</a></li>
-                            <li><a class="nav__link" href="#popular">Popular</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="profile">
-                    <ul>
-                        <li class="search__bar">
-                            <form id="search" onsubmit="searchMovies(event)">
-                                <input  class="search-bar" onchange="onSearchChange(event)" placeholder="Search for movies..." type="text" >
-                                <!-- <i id="glass" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i> -->
-                            </form>
-
-                            
-                            
-                        </li>
-                        <li class="nav__logo"><a href="#"><i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i></a></li>
-                        <li class="nav__logo"><a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a></li>
-                    </ul>
-                </div>
+      <div class="container__nav">
+        <div class="scrolling">
+          <div class="nav" id="nav">
+            <div class="logo">
+              <a class="nav__link" href="#"
+                ><img
+                  href="movie.html"
+                  class="logo__sizing"
+                  src="./pictures/Logo (3).png"
+                  alt=""
+              /></a>
+              <div class="nav__bar">
+                <!-- <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i> -->
+                <ul>
+                  <li><a class="nav__link" href="#">Home</a></li>
+                  <li><a class="nav__link" href="#">Movies</a></li>
+                  <li><a class="nav__link" href="#new">New</a></li>
+                  <li><a class="nav__link" href="#popular">Popular</a></li>
+                </ul>
+              </div>
             </div>
+            <div class="profile">
+              <ul>
+                <li class="search__bar">
+                  <form id="search" onsubmit="searchMovies(event)">
+                    <input
+                      class="search-bar"
+                      onchange="onSearchChange(event)"
+                      placeholder="Search for movies..."
+                      type="text"
+                    />
+                    <!-- <i id="glass" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i> -->
+                  </form>
+                </li>
+                <li class="nav__logo">
+                  <a href="#"
+                    ><i
+                      class="fa-solid fa-bell fa-xl"
+                      style="color: #ffffff"
+                    ></i
+                  ></a>
+                </li>
+                <li class="nav__logo">
+                  <a href="#"
+                    ><i
+                      class="fa-solid fa-user fa-xl"
+                      style="color: #ffffff"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
     <!-- STRANGER THINGS -->
     <section>
-        <div class="">
-            <div class="banner">
-                <img class="stranger" src="./pictures/stranger things.jpg" alt="">
-                <div class="banner__content">
-                    <h1 class="banner__title"><img class="logo__img" src="./pictures/JS pics/stranger.png" alt=""></h1>
-                    <div class="banner__buttons">
-                        <button class="banner__button">Play</button>
-                        <button class="banner__button">My List</button>
-                    </div>
-                    <div class="banner__description">
-                        In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.
-                    </div>
-                </div>
-
+      <div class="">
+        <div class="banner">
+          <img class="stranger" src="./pictures/stranger things.jpg" alt="" />
+          <div class="banner__content">
+            <h1 class="banner__title">
+              <img
+                class="logo__img"
+                src="./pictures/JS pics/stranger.png"
+                alt=""
+              />
+            </h1>
+            <div class="banner__buttons">
+              <button class="banner__button">Play</button>
+              <button class="banner__button">My List</button>
             </div>
+            <div class="banner__description">
+              In 1980s Indiana, a group of young friends witness supernatural
+              forces and secret government exploits. As they search for answers,
+              the children unravel a series of extraordinary mysteries.
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Trending -->
     <section id="new" class="movies">
-        <div class="container">
+      <div class="container">
         <div class="featured">
-            <h1 class="feature__title">Trending Now</h1>
-            <ul class="movie__list">
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/1.JPG" alt=""></li>
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/guardian.jpg" alt=""></li>
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/3.JPG" alt=""></li>
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/4.JPG" alt=""></li>
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/5.JPG" alt=""></li>
-                <li class="poster"><img class="movie__img"  src="./pictures/JS pics/6.JPG" alt=""></li>
-            </ul>
+          <h1 class="feature__title">Trending Now</h1>
+          <ul class="movie__list">
+            <li class="poster">
+              <img class="movie__img" src="./pictures/JS pics/1.JPG" alt="" />
+            </li>
+            <li class="poster">
+              <img
+                class="movie__img"
+                src="./pictures/JS pics/guardian.jpg"
+                alt=""
+              />
+            </li>
+            <li class="poster">
+              <img class="movie__img" src="./pictures/JS pics/3.JPG" alt="" />
+            </li>
+            <li class="poster">
+              <img class="movie__img" src="./pictures/JS pics/4.JPG" alt="" />
+            </li>
+            <li class="poster">
+              <img class="movie__img" src="./pictures/JS pics/5.JPG" alt="" />
+            </li>
+            <li class="poster">
+              <img class="movie__img" src="./pictures/JS pics/6.JPG" alt="" />
+            </li>
+          </ul>
         </div>
-        <style>
-
-          </style>
-        </head>
-          <div id="poster-grid"></div>
+        <div id="poster-grid"></div>
         <div id="popular" class="featured">
-            <h1 class="feature__title">Continue Watching</h1>
+          <h1 class="feature__title">Continue Watching</h1>
         </div>
         <div class="movies">
-            <ul class="movie__list">
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok.JPG" alt=""></a></li>
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok8.jpeg" alt=""></a></li>
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok3.jpeg" alt=""></a></li>
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok4.jpeg" alt=""></a></li>
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok5.jpeg" alt=""></a></li>
-                <li class="poster"><a target="_blank" href="https://www.tiktok.com/@davidabragg?lang=en"><img class="movie__img"  src="./pictures/JS pics/tiktok6.jpeg" alt=""></a></li>
-            </ul>
-
-
-    </div>
-    <h1 class="feature__title result">You searched for ...</h1>
-    <div class="movie-section">
-        <div class="movie-list">
-            <div class="movie__loading">
-                <i class="fa-solid fa-spinner fa-2xl movie__loading--spinner" style="color: #ffffff;"></i>
-            </div>
-            <!-- <div class="movies">
-                <div class="cards">
-                    <div class="card">
-                        <div class="header"><img class="movie__search" src="./pictures/JS pics/avatar.jpg" alt=""></div>
-                        <div class="body data-body movieTitle"><h1>movie title</h1></div>
-                        <div class="body data-body"><h1>Movie Year</h1></div>
-
-                    </div>
-                        
-                    </div>
-                    
-                </div> -->
-            </div>
+          <ul class="movie__list">
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok.JPG"
+                  alt=""
+              /></a>
+            </li>
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok8.jpeg"
+                  alt=""
+              /></a>
+            </li>
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok3.jpeg"
+                  alt=""
+              /></a>
+            </li>
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok4.jpeg"
+                  alt=""
+              /></a>
+            </li>
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok5.jpeg"
+                  alt=""
+              /></a>
+            </li>
+            <li class="poster">
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@davidabragg?lang=en"
+                ><img
+                  class="movie__img"
+                  src="./pictures/JS pics/tiktok6.jpeg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
         </div>
-    </div>
+        <h1 class="feature__title result">You searched for ...</h1>
+        <div class="movie-section">
+          <div class="movie-list">
+            <div class="movie__loading--wrapper movie__loading">
+              <i
+                class="fa-solid fa-spinner fa-2xl movie__loading--spinner"
+                style="color: #ffffff"
+              ></i>
+            </div>
+            <div class="movies">
+              <div class="cards">
+                <div class="card">
+                  <div class="header">
+                    <img
+                      class="movie__search"
+                      src="./pictures/JS pics/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="body data-body movieTitle">
+                    <h1>movie title</h1>
+                  </div>
+                  <div class="body data-body"><h1>Movie Year</h1></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
 
-
-    
-    
-
-
-
-
-
-
-<footer>
-    <div class="container"></div>
-    <div class="space">
+    <footer>
+      <div class="container"></div>
+      <div class="space">
         <div class="footer">
-        <div class="footer">
+          <div class="footer">
             <ul class="footer__icon">
-                <li><a href="#"><i class="size fa-brands fa-facebook-f fa-2xl" style="color: #ffffff;"></i></a></li>
-                <li><a  href="#"><i class="size fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a></li>
-                <li><a  href="#"><i class="size fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i></a></li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="size fa-brands fa-facebook-f fa-2xl"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="size fa-brands fa-instagram fa-2xl"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="size fa-brands fa-youtube fa-2xl"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </li>
             </ul>
+          </div>
         </div>
-    </div>
-</div>
-</footer>
-<!-- Loader -->
+      </div>
+    </footer>
+  </body>
 
+  <!-- Loader -->
 </html>
 
 <!-- TO DO -->

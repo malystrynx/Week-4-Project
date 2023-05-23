@@ -12,7 +12,7 @@ body{
     background-color: #141414;
 }
 .container__nav{
-padding-left:30px;
+
 padding-right:30px;
 }
 .container{
@@ -74,7 +74,6 @@ ul{
 }
 .logo__sizing{
     cursor: pointer;
-    width: 100%; 
     max-width: 120px;
 }
 .nav{
@@ -104,7 +103,7 @@ ul{
     text-decoration: none;
     color: white;
     display: flex;
-    flex-direction: column;
+
     padding-left: 30px;
 }
 
@@ -345,7 +344,6 @@ transition: 650ms ;
 }
 
 .movie__loading .movie__loading--spinner{
-    position: absolute;
     display: block !important;
     
 }
@@ -362,10 +360,8 @@ transition: 650ms ;
   }
 
   @media  (max-width: 1024px) {
-.nav{
-    padding-left: 0;
-padding-right: 0;
-}
+
+
 .logo__img{
     width: 100%;
     max-width: 60%;
@@ -376,6 +372,29 @@ padding-right: 0;
     line-height: 1.6rem;
 }
   }
+
+@media(max-width:900px){
+.nav__bar{
+    display: none;
+}
+}
+
+
+@media (max-width:768px){
+.nav__bar{
+    display: none;
+}
+}
+@media (max-width:600px){
+.nav__logo{
+    display: none;
+}
+.logo__img{
+    padding: 0px;
+}
+
+}
+
 
 
 
