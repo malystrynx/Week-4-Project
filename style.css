@@ -334,6 +334,21 @@ transition: 650ms ;
 #search{
     padding-right: 20px;
 }
+.movie-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie__loading--spinner{
+    display: none !important;
+}
+
+.movie__loading .movie__loading--spinner{
+    position: absolute;
+    display: block !important;
+    
+}
 
 /* RESPONSIVENESS */
 
