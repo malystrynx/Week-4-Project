@@ -490,9 +490,9 @@ ul{
 @media (max-width:768px){
 
     .banner__button{
-        font-size: 10px;
-        padding-left:1.6rem ;
-        padding-right:1.6rem ;
+        font-size: 16px;
+        padding-left:2rem ;
+        padding-right:2rem ;
         
     }
     .logo__img {
@@ -504,23 +504,17 @@ ul{
     display: none;
 }
 .banner__description{
-    font-size: 12px;
+    font-size: 16px;
 }
 }
 @media (max-width:600px){
     .banner__button {
-        font-size: 8px;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
+        font-size: 14px;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
     }
     .banner__description{
-        font-size: 10px;
-    }
-    .banner__content{
-        padding-right: 120px;
-    }
-    .banner__title{
-        padding-left: 20px;
+        font-size: 14px;
     }
 .nav__logo{
     display: none;
@@ -551,7 +545,7 @@ width: 250px;
 }
 .stranger{
     height: 425px;
-    ;
+    
 }
 .banner__content{
     top: 0%;
@@ -564,8 +558,9 @@ mix-blend-mode: color-burn;
 .logo__sizing{
     display: none;
 }
-.
+
 .logo__img{
+
     max-width: 300px;
 }
 .banner__description{
