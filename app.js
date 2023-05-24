@@ -7,6 +7,13 @@ function changeScrolling() {
     nav.classList.add("scrolling");
   }
 }
+// Backdrop
+function openMenu(){
+  document.body.classList += " menu--open"
+}
+function closeMenu(){
+  document.body.classList.remove('menu--open')
+}
 
 window.addEventListener("scroll", changeScrolling);
 
